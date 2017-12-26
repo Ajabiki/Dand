@@ -1,0 +1,23 @@
+%h1 Hello World!
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Strength
+      %th Dexterity
+      %th Constitution
+      %th Wisdom
+      %th Intelligence
+      %th Charisma
+  %tbody
+    - @characters.each do |character|
+      %tr
+        %td= character.name
+        %td= character.strength
+        %td= character.dexterity
+        %td= character.constitution
+        %td= character.wisdom
+        %td= character.intelligence
+        %td= character.charisma
+
