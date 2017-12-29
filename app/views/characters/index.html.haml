@@ -13,11 +13,12 @@
   %tbody
     - @characters.each do |character|
       %tr
-        %td= character.name
+        %td= link_to "#{character.name}", character_path(:id => character.id)
         %td= character.strength
         %td= character.dexterity
         %td= character.constitution
         %td= character.wisdom
         %td= character.intelligence
-        %td= character.charisma
+        %td= character.id
 
+%h3= link_to "New Character", new_character_path, class: 'button'
