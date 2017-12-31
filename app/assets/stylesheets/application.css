@@ -14,6 +14,19 @@
  *= require_self
  */
 
+body{
+  background-color: rgba(0, 0, 0, 0.2)
+
+}
+
+header {
+  background-color: rgba(255, 0, 0, 0.5)
+}
+
+.header_link {
+  padding: 64px 11px 4px 11px;
+}
+
 .button {
   font: 11px;
   text-decoration: none;
@@ -24,4 +37,25 @@
   border-right: 1px solid #333333;
   border-bottom: 1px solid #CCCCCC;
   border-left: 1px solid #333333;
+}
+
+.site_header_style {
+  background-color: #FF0000
+}
+
+.character_header_text {
+  font: 8px;
+  text-decoration: none;
+  color: #f12a34;
+  border-top: 1px solid #000000;
+}
+
+.character_sheet_header {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(125, 125, 125, 0.5);
+}
+
+.logo {
+  padding: 64px 11px 4px 11px;
 }

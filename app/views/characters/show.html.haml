@@ -1,3 +1,132 @@
-%h1 This is the show character page
-%h2= @character.name
+%header
+  %table
+    %th{:class => "logo"}= link_to "Critical Fail", '/'
+    %th{:class => "header_link"}= link_to "Characters", characters_path
+    %th{:class => "header_link"} Races
+    %th{:class => "header_link"} Classes
+    %th{:class => "header_link"} Backgrounds
+    %th{:class => "header_link"} Spells
+    %th{:class => "header_link"} Equipment
+
+%table{:class => "character_sheet_header"}
+  %th
+    %table
+      %tr
+        %th= @character.name
+      %tr 
+        %th{:Class => "character_header_text"} Character Name
+    %th
+      %table
+
+        %tr
+          %th Barbarian
+          %th 1st
+          %th Outlander
+        %tr
+          %th{:Class => "character_header_text"} Class
+          %th{:Class => "character_header_text"} Level
+          %th{:Class => "character_header_text"} Background
+        %tr
+          %th Human
+          %th Chaotic Good
+          %th 250
+        %tr 
+          %th{:Class => "character_header_text"} Race
+          %th{:Class => "character_header_text"} Alignment
+          %th{:Class => "character_header_text"} Experience Points
+<!-- End of character Sheet Header -->
+
+%table
+  %tr 
+    %th 
+      %table
+        %tr 
+          %th Attibute
+          %th Score
+          %th Bonus
+        %tr
+          %th Strength
+          %th= @character.strength
+          %th= @character.stat_prof(@character.strength)
+        %tr
+          %th Dexterity
+          %th= @character.dexterity
+          %th= @character.stat_prof(@character.dexterity)
+        %tr
+          %th Constitution
+          %th= @character.constitution
+          %th= @character.stat_prof(@character.constitution)
+        %tr
+          %th Intelligence
+          %th= @character.intelligence
+          %th= @character.stat_prof(@character.intelligence)
+        %tr
+          %th Wisdom
+          %th= @character.wisdom
+          %th= @character.stat_prof(@character.wisdom)
+        %tr
+          %th Charisma
+          %th= @character.charisma
+          %th= @character.stat_prof(@character.charisma)
+    %th
+      %table
+        %tr 
+          %th Skill
+          %th Bonus
+        %tr
+          %th Acrobatics
+          %th= @character.stat_prof(@character.dexterity)
+        %tr
+          %th Animal Handling
+          %th= @character.stat_prof(@character.wisdom)
+        %tr
+          %th Arcana
+          %th= @character.stat_prof(@character.intelligence)
+        %tr
+          %th Athletics
+          %th= @character.stat_prof(@character.strength)
+        %tr
+          %th Deception
+          %th= @character.stat_prof(@character.charisma)
+        %tr
+          %th History
+          %th= @character.stat_prof(@character.intelligence)
+        %tr
+          %th Insight
+          %th= @character.stat_prof(@character.wisdom)
+        %tr
+          %th Intimidation
+          %th= @character.stat_prof(@character.charisma)
+        %tr
+          %th Investigation
+          %th= @character.stat_prof(@character.intelligence)
+        %tr
+          %th Medicine
+          %th= @character.stat_prof(@character.wisdom)
+        %tr
+          %th Nature
+          %th= @character.stat_prof(@character.intelligence)
+        %tr
+          %th Perception
+          %th= @character.stat_prof(@character.wisdom)
+        %tr
+          %th Performance
+          %th= @character.stat_prof(@character.charisma)
+        %tr
+          %th Persuassion
+          %th= @character.stat_prof(@character.charisma)
+        %tr
+          %th Religion
+          %th= @character.stat_prof(@character.intelligence)
+        %tr
+          %th Sleight of Hand
+          %th= @character.stat_prof(@character.dexterity)
+        %tr
+          %th Stealth
+          %th= @character.stat_prof(@character.dexterity)
+        %tr
+          %th Survival
+          %th= @character.stat_prof(@character.wisdom)
+<!-- End of skills table -->
+
 %h3= link_to "Edit Character", edit_character_path(:id => @character.id), class: 'button'
